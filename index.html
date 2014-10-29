@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>clenclen</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<!--Google Fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,400,100italic,300italic,400italic' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Contrail+One' rel='stylesheet' type='text/css'>
+
+
+<style>
+	.logo{
+		display: block; 
+		margin-left: auto; 
+		margin-right: auto; 
+		cursor: pointer;
+	}
+	.logo:hover {
+		color: red; 
+	}
+
+	.heygirl{
+		display: block; 
+
+	}
+	.heygirl li{
+		display: inline-block;
+		font-family: 'Contrail One';
+		font-weight: 400; 
+		color:#FFCAD1;
+		font-size: 2em; 
+		list-style: none; 
+		padding-right: 20px; 
+
+	}
+
+	.container {
+		width: 100%; 
+		display: block; 
+		margin-left: auto; 
+		margin-right: auto; 
+		text-align: center;
+		margin-top: 15%; 
+		margin-bottom: 20%; 
+	}
+
+	.buttons {
+		font-family: 'Contrail One';
+		font-weight: 100; 
+		padding: 10px; 
+		cursor: pointer;
+		font-size: 1.5em; 
+	}
+
+	.buttons:hover {
+		color: #FFD586; 
+	}
+
+	.hey {
+		display: none;
+		color: black; 
+		width: 100%;
+		height: auto; 
+	}
+
+	/*Web*/
+
+	.webweb {
+
+	}
+
+	.webweb h4 {
+		font-family: "Contrail One";
+		font-size: 1em; 
+		font-weight: 100; 
+	}
+
+	.webweb h4:hover{
+		color: #81CFE0;
+	}
+	.webweb h3, p {
+		font-family: "Lato";
+		font-weight: 100;  
+		font-style: italic;
+	}
+	/*Video Tab*/
+
+	.tabs {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		font-weight: 100;
+		height: auto; 
+		padding: 15px;
+		display: block;
+		margin-left: auto;
+		margin-right:auto; 
+		font-size: 1em;  
+	}
+
+/* Nav Video */
+	.tabs nav {
+		text-align: left;
+	}
+
+	#tabs.tabs{
+		margin-top: 0px; 
+
+	}
+
+	.tabs nav ul {
+		padding: 0px;
+		list-style: none;
+		display: inline-block;
+		 
+	}
+
+	.tabs nav ul li {
+		border: 1px solid black;
+		border-bottom: none;
+		margin: 0 0.25em;
+		display: inline-block;
+		position: relative;
+		font-family: 'Contrail One';
+		width: 400; 	
+		text-align: center;
+	}
+
+
+	.tabs nav li.tab-current {
+		border: 1px solid black;
+		border-bottom: none;
+		z-index: ;
+	}
+
+	.tabs nav li.tab-current:before,
+	.tabs nav li.tab-current:after {
+		content: '';
+		position: absolute;
+		height: 1px;
+		right: 100%;
+		bottom: 0;
+		width: 1000px;
+		background: black;
+	}
+
+	.tabs nav li.tab-current:after {
+		right: auto;
+		left: 100%;
+		width: 4000px;
+	}
+
+	.tabs nav a {
+		color: black;
+		display: block;
+		font-size: 1em;
+		line-height: 2;
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+		white-space: nowrap;
+		list-style: none; 
+		text-decoration: none;
+	}
+
+	.tabs nav a:hover {
+		color: #81CFE0;
+	}
+
+	.tabs nav li.tab-current a {
+		color: black;
+	}
+
+	/* Bottom Content */
+	.bottom h1 {
+		font-family: 'Lato';
+		font-weight: 100; 
+		background: #fff; 
+	}
+
+	.bottom p {
+		background: #fff; 
+	}
+	.content{
+		width:100%;
+		height: 300px;
+		overflow: scroll;
+		display: block;
+		margin-left: auto;
+		margin-right:auto; 
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+
+	.content section {
+		font-size: 1.25em;
+		padding-left: 1em;
+		display: none;
+		margin: 0 auto;
+		list-style: none;
+
+	}
+
+	.content section ul  {	
+		list-style: none;
+		width: 100%; 
+		height: auto; 
+		padding: 0px; 
+	}
+	.content section li {	
+
+		display: inline-block;
+		padding-right: 10px;
+		padding-bottom: 40px; 
+	}
+
+	.design-logo{
+		display: block; 
+	    float: none;
+	    position: relative;
+	    margin: 0 auto;
+	}
+
+	.center-block {
+	  display: block;
+	  margin-right: auto;
+	  margin-left: auto;
+	}
+
+	.syn-primary p{
+		display: block;
+		font-family: 'Lato';		
+		font-weight: 400; 
+		font-size: 1em; 
+		color:black;
+		text-align: center; 
+		margin-left: auto;
+	    margin-right: auto;
+	    padding-left: 2em; 
+		padding-right: 2em;
+
+	}
+	.syn p{
+		font-family: "Lato";
+		font-style: italic;
+		text-align: left;
+		display: inline-block;
+		font-weight: 300;  
+		font-size: .7em; 
+		color:black;
+		letter-spacing: 0.5px;
+	}
+
+	.syn p a:link{
+		text-decoration: underline;
+	}
+
+	.content section.content-current {
+		display: inline-block;
+
+	}
+
+	.activate{
+		width:280px;
+		cursor: pointer;
+		text-align: center;
+		position: relative;
+	}
+
+	.activate p{
+		font-family: "Lato";	
+		font-weight: 100;
+		margin-top:.7em;
+		font-size: .7em;
+	}
+
+	.activate:hover .text {
+		display: block;
+		opacity: 1; 
+	}
+
+	.text {	
+		display: none; 
+		font-weight: normal; 
+		position: absolute;
+		top: 120px;
+		left:30px;
+		border: 1px black solid;
+		width: 220px; 
+		height: auto;
+		background: white;
+		z-index: 1;
+	}
+
+	.text p { 	
+		font-family: 'Lato';
+		font-weight: 100; 
+		font-size: .7em; 
+		text-align: left;
+		color:black;
+		background-color: white; 
+		text-align: left; 
+		padding: 0.3em;
+	}	
+	/*Games Contents*/
+	.gamegame{
+		width: 100%;	
+		height: auto;	
+	}
+	.gamegame ul{
+		list-style: none; 
+		display: block;
+	}
+	.gamegame li{
+		list-style: none; 
+		padding-top:2em;
+	}
+	.gamegame p {
+		margin-top: 5px; 
+		font-family: "Lato"; 
+		font-weight: 100; 
+		font-style: italic;
+	}
+	.gamegame p:hover{
+		color:#81CFE0;
+
+	}
+	.designdesign h3 {
+		font-family: "Lato"; 
+		font-weight: 100; 
+		font-style: italic;
+		font-size: 1em; 
+		padding-bottom: 15px; 
+	}
+
+	.designdesign h4 {
+		font-family: "Lato"; 
+		font-weight: 400; 
+		font-size: .7em; 
+		font-style: italic;
+	}
+
+	/*links*/
+	a:link		{	color: black;
+				text-decoration: none;
+			}
+			
+	a:link.sub	{ 	text-decoration: none;
+					background-color: #E7E7E7;
+				}
+				
+	a:visited	{	color: #333333;
+					text-decoration: none;
+				}
+
+	a:visited.sub	{	background-color: #e7e7e7;
+						text-decoration: none;
+	}
+	@media only screen and (min-width: 320px) and (max-device-width : 1024px){
+
+		.hey {
+			font-size: 1em;
+		}
+		.container h1 {
+			font-size: 8em; 
+		}
+		.buttons{
+			font-size: 6em; 
+		}
+		.content {
+			height:600px;
+			font-size: .7em; 
+		}
+		.tabs nav ul li {
+ 			font-size: 0.8em;
+		}
+	}
+</style>
+
+</head>
+
+<body>	
+<div class = "row">
+	<div class = "col-xs-10 col-sm-10 col-md-10 col-lg-10">
+		<div class= "container">
+			<div class= "buttonsgirl">
+					<img class= "logo" src= "./images/logo/logoyellow.png">
+				<div class= "heygirl">
+						<ul>
+							<li>clay ngo</li>
+							<li>hello@clenclen.com</li>
+							<li> brooklyn</li> 
+						</ul>
+
+				</div>
+			</div>
+				<div class = "buttons">web
+					<ul class = "hey">						
+			            <div class = "webweb">
+				            <h3>Concept Pages</h3>
+					            <div class= "row">
+					                <div class="col-md-6 col-lg-6 pull-left">
+					                    <a href= "./imscareddat/imscaredthat.html" target="_blank" >
+					                          <h4>I'm scared that...</h4>
+					                          <p>Daily mantras for a kinder life</p>
+					                        </a>
+					             	</div>
+					                <div class="col-md-6 col-lg-6 pull-right">
+					                	<a href= "./booty/noodlenet.html" target="_blank">         
+					                          <h4>Noodle Net</h4>
+					                          <p>The latest fashion trend</p>
+					                    </a>
+					                </div>
+					            </div>    
+				        </div><!--/webweb-->
+					</ul>
+			</div>
+			<div class = "buttons">videos
+					<ul class = "hey videos">						
+				 		<div class= "row"> 
+				          <div class= "col-sm-12 col-md-12 col-lg-12"> 
+				           		<div id= "tabs" class="tabs">   
+					                <nav class= "bottom">         
+					                  <ul> 
+					                      <li><a href="#section-1"><span>love</span></a></li>
+					                      <li><a href="#section-2"><span>b-daze</span></a></li>
+					                      <li><a href="#section-3"><span>unspoken</span></a></li>
+					                      <li><a href="#section-4"><span>china</span></a></li>
+					                    </ul>
+					                </nav>
+				              </div>
+				          </div> <!--/col-->
+				        </div> <!--/row-->
+				      	<div class= "row"> 
+				        	<div class= "col-sm-10 col-md-10 col-lg-10 pull-left"> 
+				            	<div class="content">
+				                  <section id="section-1">
+				                        <div class = "syn"><p>love, why is it so hard to find/keep/let go of?</p></div>
+				                        <ul>
+				                          <li>
+				                          <div class= "activate">
+				                              <a href="http://www.youtube.com/embed/87iXAVLEMLo" target="_blank"><img src="./images/films/tq.jpg" alt="te quiero" height="140" width="250">
+				                              <p>te quiero</p></a>
+				                            <div class= "text"><p>a love story inspired by taco bell.</p>
+				                            </div>
+				                          </div>
+				                          </li>
+				                        
+				                        <li>
+				                            <div class= "activate">
+				                              <a href="http://www.youtube.com/embed/CSs2Y-Z2QKU?rel=0"target="_blank"><img src="./images/films/ydoo.jpg" alt="you da only one" height="140" width="250">
+				                            <p>ya da only one</p></a>
+				                            <div class= "text"><p>a look into what happens when we live in a culture of 'you da only one'.</p>
+				                            </div>
+				                          </div>
+				                        </li> 
+				                      </ul>   
+				                  </section> <!-- /section1 -->
+	    
+					                 <section id="section-2">                
+					                    <div class= "syn">
+					                      <p>armed with a camera and an insatiable need to capture a period of my homies' lives (the SF exodus was felt), i eventually amassed a heap of footage and began stringing  pieces together. the offering of b-daze videos became my present to them.</p>
+					                    </div>
+					                          <ul>
+					                            <li>  
+					                            <div class= "activate">
+					                              <a href="http://www.youtube.com/embed/7yqtOpXKgCQ" target="_blank"><img src="./images/films/hbr.jpg" alt="hbr" height="140" width="250">
+					                            <p>happybdayroby (2011)</p></a>
+					                            <div class= "text"><p>beyonce's 1+1 becomes a power song in live-karaoke.</p>
+					                            </div>
+					                          </div>
+					                        </li>
+					                          <li>
+					                            <div class= "activate">
+					                              <a href="http://www.youtube.com/embed/lcJW2ozchUw" target="_blank"><img src="./images/films/hbt.jpg" alt="hbt" height="140" width="250">
+					                            <p>fortamtam - hb! (2011)</p></a>
+					                            <div class= "text"><p>tamtam's most quoted quote: oooooooh my goddd~~!</p>
+					                            </div>
+					                          </div>
+					                          </li>
+					                          <li>
+					                            <div class= "activate">
+					                              <a href="http://www.youtube.com/embed/YfMcYqx13JI" target="_blank"><img src="./images/films/hbs.jpg" alt="hbs" height="140" width="250">
+					                            <p>stepamie - hb! (2012)</p></a>
+					                            <div class= "text"><p>betobetobeto and i sit and chat about our dear friend and her magic of sitting.</p>
+					                            </div>
+					                          </div>
+					                          </li>
+
+					                          <li>
+					                            <div class= "activate">
+					                              <a href="http://www.youtube.com/embed/xVnL3lS6pl0?rel=0" target="_blank"><img src="./images/films/sr.jpg" alt="hbs" height="140" width="250">
+					                              <p>sandy roses (2012)</p></a>
+					                            <div class= "text"><p>betobetobeto and i sit and chat about our dear friend and the ever reoccuring motif of same same-ness but different-ness.</p>
+					                            </div>
+					                          </div>
+					                          </li>
+					                        <li>
+					                            <div class= "activate">
+					                              <a href="http://www.youtube.com/embed/y7Zm8-FmKOU" target="_blank"> <img src="./images/films/rbb.jpg" alt="rbb" height="140" width="250">
+					                              <p>robybooboo (2012)</p></a>
+					                            <div class= "text"><p>stephamie + kelly and i, over the internet, chat about our friend roby and what we might like about him.</p>
+					                            </div>
+					                          </div>
+					                          </li>
+					                          <li>
+					                            <div class= "activate">
+					                              <a href="http://www.youtube.com/embed/RQuhHVNhSe8" target="_blank"><img src="./images/films/yacn.jpg" alt="yacn" height="140" width="250">
+					                              <p>you're a cougar now (2012)</p></a>
+					                              <div class= "text"><p>betobetobeto and i, inspired by the instrumentals of rhianna’s "umbrella," write a song for our aging friend, tamtam.</p>
+					                            </div>
+					                          </div>
+					                          </li>
+					                        </ul>
+					                    </section> <!-- /section2 -->
+
+
+					                   <section id="section-3">
+					                        <div class = "syn"><p>i spearheaded unspoken shorts for 2 1/2 years at the <a href="http://www.apiwellness.org/unspokenshorts.html">asian and pacific islander wellness center</a>. a cdc project targeting homo-asian guys in the yay area to promote safer sex thru storytelling and advice sharing. </p></div>
+					                        <ul>
+					                          <li>  
+					                          <div class= "activate">
+					                              <a href="https://www.youtube.com/playlist?list=PLlUIiz2z5gKz9oZobYtHUwyN7QJemJ7H5"target="_blank"><img src="./images/films/uss/uss1a.png" alt="te quiero" height="140" width="250">
+					                              <p>season 1: condoms</p></a>
+					                            <div class= "text"><p>season 1 explored condom use and negotiation skills.</p>
+					                            </div>
+					                          </div>
+					                          </li>
+					                        
+					                        <li>
+					                            <div class= "activate">
+					                              <a href="http://www.youtube.com/playlist?list=PLlUIiz2z5gKz3tcmDRJCL5CSPa8_dKctk"target="_blank"><img src="./images/films/uss/uss2a.png" alt="you da only one" height="140" width="250">
+					                            <p>season 2: tony's story</p></a>
+					                            <div class= "text"><p>tony's story took a look at alcoholism and sex in the digital age.</p>
+					                            </div>
+					                          </div>
+					                        </li> 
+					                        <li>
+					                          <div class= "activate">
+					                              <a href="http://www.youtube.com/playlist?list=PLlUIiz2z5gKxOh2TkzV022x6Oc_9Tv286"target="_blank"><img src="./images/films/uss/uss3.png" alt="you da only one" height="140" width="250">
+					                              <p>season 3: 1st person narratives</p></a>
+					                            <div class= "text"><p>during my final season with this project, i organized workshops to have people in the community tell their own stories.</p>
+					                            </div>
+					                          </div>
+					                          </li>
+					                      </ul>       
+					                  </section><!-- /section3 -->
+					                  <section id="section-4">
+					                        <div class = "syn"><p>in '08-09 i studied in beijing. i was a recepient of the <a href="http://www.iie.org/programs/gilman-scholarship-program">gilman international scholarship</a> and for my service project, i made a video giving an overview of peking univeristy from the perspective of study abroad participants. other videos of my lovely stay in the harmonious china followed.</p></div>
+					                        <ul>
+					                          <li>  
+					                          <div class= "activate">
+					                              <a href="http://www.youtube.com/embed/d-KcukTdyLA" target="_blank"><img src="./images/films/northbig.png" alt="northbig" height="140" width="250">
+					                              <p>inside china: peking university</p></a>
+					                            <div class= "text"><p>a tour of peking university and interviews with some study abroad participants.</p>
+					                            </div>
+					                          </div>
+					                          </li>
+					                        
+					                        <li>
+					                            <div class= "activate">
+					                              <a href="http://www.youtube.com/embed/oclm4b_yL3w" target="_blank"><img src="./images/films/wall.png" alt="great wall" height="140" width="250">
+					                            <p>inside china: mao's great wall</p></a>
+					                            <div class= "text"><p>thwarted by the censorship of mao's great fire-wall, sailor uranus and neptune struggle to express their love. basically, my experience of trying to watch porn in china. (and learning after effects and pro tools)</p>
+					                            </div>
+					                          </div>
+					                        </li> 
+					                        <li>
+					                          <div class= "activate">
+					                              <a href="http://www.youtube.com/embed/Rka7TWNKOyM" target="_blank"><img src="./images/films/boatppl.png" alt="boat people" height="140" width="250">
+					                              <p>inside china: boat people</p></a>
+					                            <div class= "text"><p>visiting family in rural china, i took a boat from hainan island -> guangzhou .</p>
+					                            </div>
+					                          </div>
+					                          </li>
+					                      </ul>       
+					                  </section><!-- /section4 -->
+					            </div><!--content-->
+           					</div><!--/col-->
+          				</div><!--/row-->
+	          		</ul>
+			</div><!--video-->
+			<div class= "buttons"> games
+				<ul class = "hey">						
+						<div class = "row">
+     			           <div class="col-md-12 col-lg-12">
+		                     <div class= "gamegame">
+		                       <li class = "goldfish">
+									<a href= "./games/goldfish.html" target= "blank"><img src="./images/games/goldfish.png" width= "150px" height="120px"><br><p>Memory Goldfish Game</p> </a>
+								</li>
+								<li class = "rps">
+									<a href= "./games/rps.html" target= "blank"><img src="./images/games/scissors.png" width= "120px" height="110px"><br><p>Rock, Paper, Scissors!</p> </a>
+								</li>
+								<li class = "stopclock">
+									<a href= "./games/kitchentimer.html" target= "blank"> <img src="./images/games/stopclock.png" width= "180px" height="120px"><br><p>Stopclock</p></a>
+								</li>
+							</div>
+						</div>
+					</div>
+				</ul>
+			</div><!--/game-->
+			<div class = "buttons">design
+					<ul class = "hey">						
+						<div class = "row">
+     			           <div class="col-md-12 col-lg-12">
+     			           		<div class = "designdesign">
+	     			           		<h3>Some Posters</h3>
+			                     		<div class= "slide">
+				                        <h4>Free Adovacy Training Workshop</h4>
+				                                <img class="speak" id= "np-poster" src="./images/design/SOAU5.png" width="480px">
+				                    </div>
+				                    <div class= "slide">
+				                         <h4>The Beauty of Our Lives</h4>  
+				                          <img class= "beauty" id= "np-poster"src="./images/design/beauty.png" width="480px">
+				                    </div>  
+				                    <div class= "slide">
+				                      <h4>Measure for Pleasure</h4>
+				                              <div><img id= "np-poster"src="./images/design/mFp2pink.png" width="480px"></div>       
+				                    </div>  
+			                	</div> 
+		                  </div><!--/col-->
+		                </div>
+					</ul>
+			</div><!--design-->
+		</div><!--/container-->
+	</div>
+</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	
+	<script>
+
+		$(document).ready(function(){
+			$(".buttons").click(function(){
+				$(this).children().slideToggle(); 
+			});	
+		});
+
+		$(".logo").click(function(){
+		console.log("clicked")
+			$(".heygirl").slideToggle("slow"); 
+		})
+
+		//Video Buttons
+	    var sections = $('.content > section');
+	    var tabs = $('nav.bottom > ul > li');
+
+	    tabs.each(function (i, tab) {
+	      $(tab).click(function() {
+	        $('.tab-current').removeClass('tab-current');
+	        $('.content-current').removeClass('content-current');
+	        $(tab).addClass('tab-current');
+	        $(sections[i]).addClass('content-current');
+	        return false;
+	      });
+	    });
+
+	    $(tabs[0]).addClass('tab-current');
+	    $(sections[0]).addClass('content-current');
+
+	</script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
