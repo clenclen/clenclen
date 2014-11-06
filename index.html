@@ -3,11 +3,12 @@
 
 <head>
 	<title>clenclen</title>
+	<link rel="icon" href="./images/logo/yinyang.ico" type="image/x-icon">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<!--Google Fonts-->
-	<link href='http://fonts.googleapis.com/css?family=Lato:100,400,100italic,300italic,400italic' rel='stylesheet' type='text/css'>
-   <link href='http://fonts.googleapis.com/css?family=Contrail+One' rel='stylesheet' type='text/css'>
-
+	<link href='http://fonts.googleapis.com/css?family=Contrail+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,900' rel='stylesheet' type='text/css'>
 
 <style>
 	.logo{
@@ -15,6 +16,7 @@
 		margin-left: auto; 
 		margin-right: auto; 
 		cursor: pointer;
+		margin-bottom: 2em;
 	}
 	.logo:hover {
 		color: red; 
@@ -22,16 +24,16 @@
 
 	.heygirl{
 		display: block; 
-
 	}
+
 	.heygirl li{
 		display: inline-block;
-		font-family: 'Contrail One';
-		font-weight: 400; 
-		color:#FFCAD1;
+		font-family: "Contrail One";
+		font-weight: 100 ; 
+		color:#FFCAD1;  /* pink */
 		font-size: 2em; 
 		list-style: none; 
-		padding-right: 20px; 
+		margin-bottom: 2em;
 
 	}
 
@@ -41,23 +43,25 @@
 		margin-left: auto; 
 		margin-right: auto; 
 		text-align: center;
-		margin-top: 15%; 
-		margin-bottom: 20%; 
+		margin-top: 8%; 
+		margin-bottom: 5%; 
 	}
 
 	.buttons {
 		font-family: 'Contrail One';
-		font-weight: 100; 
+		font-weight: 100;
 		padding: 10px; 
 		cursor: pointer;
-		font-size: 1.5em; 
+		font-size: 2em; 
+		color: #95a5a6; /*gray buttons*/
 	}
 
 	.buttons:hover {
-		color: #FFD586; 
+		color: #CCCB8D; /*gold*/
 	}
 
 	.hey {
+		font-style: normal;
 		display: none;
 		color: black; 
 		width: 100%;
@@ -67,22 +71,40 @@
 	/*Web*/
 
 	.webweb {
+		font-family: 'Playfair Display', serif;
+		font-weight: 300; 
+		width: 80%; 
+		display: block;
+		margin-right: auto; 
+		margin-left: auto; 
+
 
 	}
-
+	/*Title*/
+	.webweb h3 {
+		font-weight: normal;  
+		font-size: .8em; 
+		padding: 5px;  
+		color: #A4BFD2; /*some blue */
+		border-bottom: 1px #A4BFD2 solid; 
+		width:100%;
+	}
+	/*Subtitles*/
 	.webweb h4 {
-		font-family: "Contrail One";
-		font-size: 1em; 
-		font-weight: 100; 
+		font-size: .7em; 
+		font-weight: 400; 
+		color:#D8C4BC; /*brown*/
+
 	}
 
 	.webweb h4:hover{
-		color: #81CFE0;
+		color: #CCCB8D;
 	}
-	.webweb h3, p {
-		font-family: "Lato";
-		font-weight: 100;  
-		font-style: italic;
+
+	.webweb p {
+		color:#95a5a6; /*gray*/
+		font-weight: 300;  
+		font-size: .5em; 
 	}
 	/*Video Tab*/
 
@@ -99,7 +121,7 @@
 		font-size: 1em;  
 	}
 
-/* Nav Video */
+/* Nav Video Tabs*/
 	.tabs nav {
 		text-align: left;
 	}
@@ -122,7 +144,7 @@
 		margin: 0 0.25em;
 		display: inline-block;
 		position: relative;
-		font-family: 'Contrail One';
+		font-family: "Contrail One";
 		width: 400; 	
 		text-align: center;
 	}
@@ -152,9 +174,9 @@
 	}
 
 	.tabs nav a {
-		color: black;
+		color: #A4BFD2; /*some blue */
 		display: block;
-		font-size: 1em;
+		font-size: .8em;
 		line-height: 2;
 		padding-left: 0.5em;
 		padding-right: 0.5em;
@@ -168,18 +190,13 @@
 	}
 
 	.tabs nav li.tab-current a {
-		color: black;
+		color: #A4BFD2; /*some blue */
 	}
 
-	/* Bottom Content */
+	/* Content Section "bottom" */
 	.bottom h1 {
-		font-family: 'Lato';
-		font-weight: 100; 
-		background: #fff; 
-	}
+		font-family: 'Playfair Display';
 
-	.bottom p {
-		background: #fff; 
 	}
 	.content{
 		width:100%;
@@ -213,51 +230,30 @@
 		padding-right: 10px;
 		padding-bottom: 40px; 
 	}
+	
+	.content section.content-current {
+		display: inline-block;
 
-	.design-logo{
-		display: block; 
-	    float: none;
-	    position: relative;
-	    margin: 0 auto;
 	}
 
-	.center-block {
-	  display: block;
-	  margin-right: auto;
-	  margin-left: auto;
-	}
-
-	.syn-primary p{
+	/* Hover text */
+	.syn p{
 		display: block;
-		font-family: 'Lato';		
+		font-family: 'Playfair Display';		
 		font-weight: 400; 
-		font-size: 1em; 
+		font-size: .5em; 
 		color:black;
 		text-align: center; 
 		margin-left: auto;
 	    margin-right: auto;
 	    padding-left: 2em; 
 		padding-right: 2em;
-
-	}
-	.syn p{
-		font-family: "Lato";
-		font-style: italic;
-		text-align: left;
-		display: inline-block;
-		font-weight: 300;  
-		font-size: .7em; 
-		color:black;
-		letter-spacing: 0.5px;
+		color:#95a5a6; /*gray*/
 	}
 
 	.syn p a:link{
 		text-decoration: underline;
-	}
-
-	.content section.content-current {
-		display: inline-block;
-
+		color:#95a5a6; /*gray*/
 	}
 
 	.activate{
@@ -265,13 +261,16 @@
 		cursor: pointer;
 		text-align: center;
 		position: relative;
+
 	}
 
 	.activate p{
-		font-family: "Lato";	
+		font-family: 'Playfair Display';		
 		font-weight: 100;
 		margin-top:.7em;
-		font-size: .7em;
+		font-size: .5em;
+		color:#95a5a6; /*gray*/
+
 	}
 
 	.activate:hover .text {
@@ -293,14 +292,15 @@
 	}
 
 	.text p { 	
-		font-family: 'Lato';
+		font-family: 'Playfair Display';		
 		font-weight: 100; 
-		font-size: .7em; 
+		font-size: .5em; 
 		text-align: left;
 		color:black;
 		background-color: white; 
 		text-align: left; 
 		padding: 0.3em;
+		color:#95a5a6; /*gray*/
 	}	
 	/*Games Contents*/
 	.gamegame{
@@ -316,29 +316,39 @@
 		padding-top:2em;
 	}
 	.gamegame p {
-		margin-top: 5px; 
-		font-family: "Lato"; 
+		margin-bottom: 1em; 
+		font-family: 'Playfair Display';		
 		font-weight: 100; 
-		font-style: italic;
+		font-size: .7em; 
+		color: #A4BFD2; /*some blue */
+		border-bottom: 1px solid #A4BFD2; 
+		width: 50%; 
+		margin-left: auto; 
+		margin-right: auto; 
+		display: block; 
 	}
-	.gamegame p:hover{
-		color:#81CFE0;
 
-	}
 	.designdesign h3 {
-		font-family: "Lato"; 
-		font-weight: 100; 
-		font-style: italic;
-		font-size: 1em; 
-		padding-bottom: 15px; 
+		font-family: 'Playfair Display';		
+		font-size: .7em; 
+		color:#A4BFD2; /*blue dust*/
+		border-bottom: 1px solid #A4BFD2; 
+		width: 50%; 
+		border-bottom: 1px solid #A4BFD2; 
+		width: 50%; 
+		margin-left: auto; 
+		margin-right: auto; 
+
+
 	}
 
 	.designdesign h4 {
-		font-family: "Lato"; 
-		font-weight: 400; 
+		font-family: 'Playfair Display';		
 		font-size: .7em; 
-		font-style: italic;
+		color:#D8C4BC; /*brown*/
+
 	}
+
 
 	/*links*/
 	a:link		{	color: black;
@@ -367,12 +377,37 @@
 		.buttons{
 			font-size: 6em; 
 		}
+
+		.heygirl li{
+			font-size: 4em; 
+		}
+		/*Web*/
+		.webweb h4 {
+		font-size: .3em; 
+		}
+		.webweb h3 {
+			font-weight: 100;  
+			font-size: .2em; 
+		}
+		.webweb p {
+			font-weight: 100;  
+			font-size: .2em; 
+		}
+
+		/*Videos*/
 		.content {
 			height:600px;
-			font-size: .7em; 
+			font-size: .8em; 
 		}
 		.tabs nav ul li {
- 			font-size: 0.8em;
+ 			font-size: .8em;
+		}
+		/*Design*/
+		.designdesign h3 {
+			font-size: 0.5em;
+		}
+		.designdesign h4 {
+			font-size: 0.5em;
 		}
 	}
 </style>
@@ -381,31 +416,39 @@
 
 <body>	
 <div class = "row">
-	<div class = "col-xs-10 col-sm-10 col-md-10 col-lg-10">
+	<div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class= "container">
 			<div class= "buttonsgirl">
-					<img class= "logo" src= "./images/logo/logoyellow.png">
-				<div class= "heygirl">
-						<ul>
-							<li>clay ngo</li>
-							<li>hello@clenclen.com</li>
-							<li> brooklyn</li> 
-						</ul>
+					<img class= "logo" src= "./images/logo/yinyang.png">
+				<div class = "row">
+					<div class= "heygirl">
+							<ul>
+								<div class= "col-xs-4 col col-lg-4">
+									<li>clay ngo</li>
+								</div>
+								<div class= "col-xs-4 col-lg-4">
+									<li>hello @ clenclen.com</li>
+								</div>
+								<div class= "col-xs-4 col-lg-4">
+									<li>brooklyn</li> 
+								</div>
+							</ul>
 
+					</div>
 				</div>
 			</div>
-				<div class = "buttons">web
+				<div class = "buttons">w e b
 					<ul class = "hey">						
 			            <div class = "webweb">
 				            <h3>Concept Pages</h3>
 					            <div class= "row">
-					                <div class="col-md-6 col-lg-6 pull-left">
+					                <div class="col-s-6 col-md-6 col-lg-6">
 					                    <a href= "./imscareddat/imscaredthat.html" target="_blank" >
 					                          <h4>I'm scared that...</h4>
 					                          <p>Daily mantras for a kinder life</p>
 					                        </a>
 					             	</div>
-					                <div class="col-md-6 col-lg-6 pull-right">
+					                <div class="col-s-6 col-md-6 col-lg-6">
 					                	<a href= "./booty/noodlenet.html" target="_blank">         
 					                          <h4>Noodle Net</h4>
 					                          <p>The latest fashion trend</p>
@@ -415,7 +458,7 @@
 				        </div><!--/webweb-->
 					</ul>
 			</div>
-			<div class = "buttons">videos
+			<div class = "buttons">v i d e o s 
 					<ul class = "hey videos">						
 				 		<div class= "row"> 
 				          <div class= "col-sm-12 col-md-12 col-lg-12"> 
@@ -580,43 +623,46 @@
           				</div><!--/row-->
 	          		</ul>
 			</div><!--video-->
-			<div class= "buttons"> games
+			<div class= "buttons"> g a m e s
 				<ul class = "hey">						
 						<div class = "row">
      			           <div class="col-md-12 col-lg-12">
 		                     <div class= "gamegame">
 		                       <li class = "goldfish">
-									<a href= "./games/goldfish.html" target= "blank"><img src="./images/games/goldfish.png" width= "150px" height="120px"><br><p>Memory Goldfish Game</p> </a>
+		                       <p>Memory Goldfish Game</p>
+									<a href= "./games/goldfish.html" target= "blank"><img src="./images/games/goldfish.png" width= "150px" height="120px"><br> </a>
 								</li>
 								<li class = "rps">
-									<a href= "./games/rps.html" target= "blank"><img src="./images/games/scissors.png" width= "120px" height="110px"><br><p>Rock, Paper, Scissors!</p> </a>
+								<p>Rock, Paper, Scissors!</p>
+									<a href= "./games/rps.html" target= "blank"><img src="./images/games/scissors.png" width= "120px" height="110px"><br> </a>
 								</li>
 								<li class = "stopclock">
-									<a href= "./games/kitchentimer.html" target= "blank"> <img src="./images/games/stopclock.png" width= "180px" height="120px"><br><p>Stopclock</p></a>
+								<p>Stopclock</p>
+									<a href= "./games/kitchentimer.html" target= "blank"> <img src="./images/games/stopclock.png" width= "180px" height="120px"><br></a>
 								</li>
 							</div>
 						</div>
 					</div>
 				</ul>
 			</div><!--/game-->
-			<div class = "buttons">design
-					<ul class = "hey">						
+			<div class = "buttons">d e s i g n
+					<ul class = "hey design">						
 						<div class = "row">
      			           <div class="col-md-12 col-lg-12">
      			           		<div class = "designdesign">
 	     			           		<h3>Some Posters</h3>
 			                     		<div class= "slide">
 				                        <h4>Free Adovacy Training Workshop</h4>
-				                                <img class="speak" id= "np-poster" src="./images/design/SOAU5.png" width="480px">
-				                    </div>
-				                    <div class= "slide">
-				                         <h4>The Beauty of Our Lives</h4>  
-				                          <img class= "beauty" id= "np-poster"src="./images/design/beauty.png" width="480px">
-				                    </div>  
-				                    <div class= "slide">
-				                      <h4>Measure for Pleasure</h4>
-				                              <div><img id= "np-poster"src="./images/design/mFp2pink.png" width="480px"></div>       
-				                    </div>  
+				                            <img class="speak" id= "np-poster" src="./images/design/SOAU5.png" width="480px">
+				                    	</div>
+					                    <div class= "slide">
+					                        <h4>The Beauty of Our Lives</h4>  
+					                          <img class= "beauty" id= "np-poster"src="./images/design/beauty.png" width="480px">
+					                    </div>  
+					                    <div class= "slide">
+					                      <h4>Measure for Pleasure</h4>
+					                              <div><img id= "np-poster"src="./images/design/mFp2pink.png" width="480px"></div>       
+				                   		 </div>  
 			                	</div> 
 		                  </div><!--/col-->
 		                </div>
@@ -637,10 +683,6 @@
 			});	
 		});
 
-		$(".logo").click(function(){
-		console.log("clicked")
-			$(".heygirl").slideToggle("slow"); 
-		})
 
 		//Video Buttons
 	    var sections = $('.content > section');
