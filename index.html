@@ -3,38 +3,38 @@
 
 <head>
 	<title>clenclen</title>
-	<link rel="icon" href="./images/logo/yinyang.ico" type="image/x-icon">
+	<link rel="icon" href="./images/logo/yingyang.ico" type="image/x-icon">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<!--Google Fonts-->
 	<link href='http://fonts.googleapis.com/css?family=Contrail+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Share:400,400italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,900' rel='stylesheet' type='text/css'>
 
 <style>
+	body {	
+		background: url("./images/logo/yinyang.png" ); 
+		background-size: 100%; 
+		background-repeat: no-repeat;
+	}
+
 	.logo{
-		display: block; 
-		margin-left: auto; 
-		margin-right: auto; 
-		cursor: pointer;
+		margin-left: 2em; 
 		margin-bottom: 2em;
-	}
-	.logo:hover {
-		color: red; 
+		float:right;
 	}
 
-	.heygirl{
-		display: block; 
-	}
-
-	.heygirl li{
-		display: inline-block;
+	.name li{
+		display: block;
+		position: relative;
 		font-family: "Contrail One";
 		font-weight: 100 ; 
 		color:#FFCAD1;  /* pink */
-		font-size: 2em; 
+		font-size: 1em; 
 		list-style: none; 
 		margin-bottom: 2em;
-
+		padding:10px; 
+		background-color: white; 
 	}
 
 	.container {
@@ -42,23 +42,28 @@
 		display: block; 
 		margin-left: auto; 
 		margin-right: auto; 
-		text-align: center;
 		margin-top: 8%; 
-		margin-bottom: 5%; 
+		margin-bottom: 20%; 
 	}
 
 	.buttons {
-		font-family: 'Contrail One';
+		font-family: 'Share';
 		font-weight: 100;
-		padding: 10px; 
+		padding-left: 2em; 
+		padding-bottom: .3em;
+		padding-top: .3em;
 		cursor: pointer;
 		font-size: 2em; 
-		color: #95a5a6; /*gray buttons*/
+		color: white; /*gray buttons*/
+		background-color: black; 
+		width: 100%;
 	}
 
+	
 	.buttons:hover {
 		color: #CCCB8D; /*gold*/
 	}
+
 
 	.hey {
 		font-style: normal;
@@ -73,23 +78,21 @@
 	.webweb {
 		font-family: 'Playfair Display', serif;
 		font-weight: 300; 
-		width: 80%; 
-		display: block;
-		margin-right: auto; 
-		margin-left: auto; 
+		width: 100%; 
+		margin-left: 2em; 
 
 
 	}
-	/*Title*/
+	/*Web Title*/
 	.webweb h3 {
 		font-weight: normal;  
 		font-size: .8em; 
 		padding: 5px;  
 		color: #A4BFD2; /*some blue */
 		border-bottom: 1px #A4BFD2 solid; 
-		width:100%;
+		width:50%;
 	}
-	/*Subtitles*/
+	/*Web subtitles*/
 	.webweb h4 {
 		font-size: .7em; 
 		font-weight: 400; 
@@ -105,6 +108,11 @@
 		color:#95a5a6; /*gray*/
 		font-weight: 300;  
 		font-size: .5em; 
+	}
+
+	/* */
+	.videos {
+		margin-left: 2em; 
 	}
 	/*Video Tab*/
 
@@ -144,7 +152,7 @@
 		margin: 0 0.25em;
 		display: inline-block;
 		position: relative;
-		font-family: "Contrail One";
+		font-family: "Playfair Display";
 		width: 400; 	
 		text-align: center;
 	}
@@ -152,7 +160,7 @@
 
 	.tabs nav li.tab-current {
 		border: 1px solid black;
-		border-bottom: none;
+		border-bottom: 1px solid #A4BFD2 ;;
 		z-index: ;
 	}
 
@@ -242,13 +250,7 @@
 		font-family: 'Playfair Display';		
 		font-weight: 400; 
 		font-size: .5em; 
-		color:black;
-		text-align: center; 
-		margin-left: auto;
-	    margin-right: auto;
-	    padding-left: 2em; 
-		padding-right: 2em;
-		color:#95a5a6; /*gray*/
+		color:#D8C4BC; /*brown*/
 	}
 
 	.syn p a:link{
@@ -304,8 +306,8 @@
 	}	
 	/*Games Contents*/
 	.gamegame{
-		width: 100%;	
 		height: auto;	
+		margin-left: 2em; 
 	}
 	.gamegame ul{
 		list-style: none; 
@@ -323,11 +325,10 @@
 		color: #A4BFD2; /*some blue */
 		border-bottom: 1px solid #A4BFD2; 
 		width: 50%; 
-		margin-left: auto; 
-		margin-right: auto; 
-		display: block; 
 	}
-
+	.designdesign {
+		margin-left: 2em; 
+	}
 	.designdesign h3 {
 		font-family: 'Playfair Display';		
 		font-size: .7em; 
@@ -336,10 +337,6 @@
 		width: 50%; 
 		border-bottom: 1px solid #A4BFD2; 
 		width: 50%; 
-		margin-left: auto; 
-		margin-right: auto; 
-
-
 	}
 
 	.designdesign h4 {
@@ -370,6 +367,7 @@
 
 		.hey {
 			font-size: 1em;
+			margin-left: -2em; 
 		}
 		.container h1 {
 			font-size: 8em; 
@@ -378,16 +376,17 @@
 			font-size: 6em; 
 		}
 
-		.heygirl li{
-			font-size: 4em; 
+		.name li{
+			font-size: 2em; 
 		}
 		/*Web*/
 		.webweb h4 {
 		font-size: .3em; 
+		margin-left: 0em; 
 		}
 		.webweb h3 {
 			font-weight: 100;  
-			font-size: .2em; 
+			font-size: .4em; 
 		}
 		.webweb p {
 			font-weight: 100;  
@@ -395,6 +394,8 @@
 		}
 
 		/*Videos*/
+		.videos {
+		}
 		.content {
 			height:600px;
 			font-size: .8em; 
@@ -419,22 +420,12 @@
 	<div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<div class= "container">
 			<div class= "buttonsgirl">
-					<img class= "logo" src= "./images/logo/yinyang.png">
-				<div class = "row">
-					<div class= "heygirl">
-							<ul>
-								<div class= "col-xs-4 col col-lg-4">
-									<li>clay ngo</li>
-								</div>
-								<div class= "col-xs-4 col-lg-4">
-									<li>hello @ clenclen.com</li>
-								</div>
-								<div class= "col-xs-4 col-lg-4">
-									<li>brooklyn</li> 
-								</div>
-							</ul>
-
-					</div>
+				<div class= "name">
+						<ul>
+								<li>clay ngo</li>
+								<li>hello @ clenclen.com</li>
+								<li>brooklyn</li> 
+						</ul>
 				</div>
 			</div>
 				<div class = "buttons">w e b
@@ -442,13 +433,13 @@
 			            <div class = "webweb">
 				            <h3>Concept Pages</h3>
 					            <div class= "row">
-					                <div class="col-s-6 col-md-6 col-lg-6">
+					                <div class="col-s-6 col-md-5 col-lg-5">
 					                    <a href= "./imscareddat/imscaredthat.html" target="_blank" >
 					                          <h4>I'm scared that...</h4>
 					                          <p>Daily mantras for a kinder life</p>
 					                        </a>
 					             	</div>
-					                <div class="col-s-6 col-md-6 col-lg-6">
+					                <div class="col-s-6 col-md-5 col-lg-5">
 					                	<a href= "./booty/noodlenet.html" target="_blank">         
 					                          <h4>Noodle Net</h4>
 					                          <p>The latest fashion trend</p>
@@ -677,12 +668,15 @@
 	
 	<script>
 
+		var slide = 0; 
+
 		$(document).ready(function(){
-			$(".buttons").click(function(){
+			$(".buttons").click(function() {
 				$(this).children().slideToggle(); 
 			});	
 		});
 
+		
 
 		//Video Buttons
 	    var sections = $('.content > section');
