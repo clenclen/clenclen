@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>rock paper scissors</title>
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+<style>
+
+	body{
+		padding:0;
+		margin: 0; 
+	}
+
+	.container {
+		width: 100%; 
+		height: auto; 
+		background-color: #95a5a6; 
+		padding-bottom: 10%; 
+		display: block;
+		margin-right: auto; 
+		margin-left: auto; 
+
+	}
+
+	.container ul {
+		list-style: none; 
+
+	}
+
+	.logo {
+		width: 100%; 
+		height: auto; 
+		display: inline-block;
+		font-family: "Lato"; 
+		font-weight: 100;
+		padding-top:2em;
+	}
+
+	.logo ul {
+		display: inline-block;
+	}
+
+	.logo li {
+		list-style: none; 
+		padding: 0px;
+	}
+
+	.logo h1 {
+		position: relative;
+		font-size: 3em; 
+		color: black;
+		vertical-align: middle; 
+		padding: 0; 
+		margin: 0; 
+	}
+
+/* Buttons! */
+
+	.button-tops {
+		width: 100%;
+		display: block;
+		margin-left: auto; 
+		margin-right: auto; 
+	}
+	
+
+	.button-tops li {
+		display: inline-block;
+		margin-right: 2%; 
+		padding:1em;
+	}
+
+	.button-tops li img{ 
+		position: absolute; 
+	}
+	
+	.button {
+		font-family: "Lato"; 	
+		font-weight: 400; 
+		width: 5em; 
+		height: auto; 
+		font-size: 1.5em; 
+		cursor: pointer;
+		position: relative;
+	}
+
+	.button span {
+		display: block;
+		margin-right: auto; 
+		margin-left: auto; 
+		color: white;
+		margin-top: 1.3em; 
+		}
+
+	.button span:hover{
+		color: #34495e;
+	}
+
+/*Message*/
+
+	.messages {
+		width: 100%; 
+		font-family: "Lato"; 
+		font-weight: 100;
+		background-color: #2980b9;
+		padding: 1em; 
+		display: block;
+		margin-left: auto; 
+		margin-right: auto;
+		position: relative;
+		margin-top: 5%; 
+	}
+
+	.messages ul { 
+		width: 100%;  
+		list-style: none; 
+	}
+
+	.messages li { 
+		display: inline-block;
+		padding: 1%; 
+	}
+
+	.user0{
+		width: 12em;
+		height: 12em; 
+		background-color: #27ae60; 
+		color: white; 
+		padding: 1em; 
+	}
+
+
+	.user{
+		width: 100%; 
+		height: 8em; 
+		background-color: white;
+		position: relative;
+		color: black; 
+		margin-top: 1.5em; 
+		font-weight: 400; 
+	}
+
+	.vs {
+		background-color: #3A393A; 
+		border-radius: 100%; 
+		width: 3em; 
+		height: 3em; 
+		opacity: .5; 
+	}
+	
+	.vs p { 
+		width: 100%; 
+		color: white; 
+		text-align: center;
+		padding-top: 1em; 
+	}
+
+	.comp{
+		width: 12em;
+		height: 12em; 
+		background-color: #e67e22;
+		color: white; 
+		padding:1em;
+
+	}
+
+	.compmess {
+		width: 100%; 
+		height: 8em; 
+		background-color: white; 
+		position: relative;
+		color: black; 
+		margin-top: 1.5em;  
+		font-weight: 400; 
+	}
+
+/* Status */
+	.status{
+		width: 20em;
+		background-color: #f1c40f; 
+		padding: 16px; 
+		font-family: "lato"; 
+		font-weight: 100; 
+		margin-left: 5%;  
+		margin-top: 2%; 
+
+
+	}
+
+	.statusmess {
+		background-color: white;
+		position: relative;
+		padding: 5px; 
+		color: black; 
+		text-align: center;
+
+	}
+
+	.box{
+		visibility: hidden;
+	}
+
+
+</style>
+
+</head>
+
+<body>
+	<div class = "container">
+		<div class= "logo">
+			<ul>
+				<li><h1> Rock, Paper, Scissors &#63;</h1></li>
+			</ul>
+		</div>
+		<div class = "button-tops">
+			<ul>
+				<li><img src="rps_images/rock.png" width="100px" height = "100px"><div class = "button"><span>rock</span></div>
+				</li>
+				<li><img src="rps_images/paper.png" width="100px" height = "100px"><div class = "button"><span>paper</span></div></li>
+				<li><img src="rps_images/scissors.png" width="100px" height = "100px"><div class = "button"><span>scissors</span></div></li>
+			</ul>
+		</div>		
+
+		<div class = "messages"> 
+			<ul>
+			<li>
+				<div class= "user0"><span>User chooses:</span>
+					<div class= "user">
+						<img class="box" src="" width="100px" height = "100px">
+					</div>
+				</div>
+			</li>
+			<li><div class = "vs"><p>VS</p></div></li>
+			<li>
+				<div class= "comp"><span>Computer chooses:</span>
+					<div class= "compmess">
+						<img class="box" src="" width="100px" height = "100px">
+					</div>
+				</div>
+			</li>
+			</ul>
+
+			<div class= "status"><span>Score:</span>
+				<div class ="statusmess">&nbsp;</div>
+			</div>
+
+		</div>
+
+
+	</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+	var userChoice = 0;
+
+	$(document).ready(function() {
+		$(".button").click(function(event) {
+			var t = $(event.target).text();
+			userChoice = t;
+
+			$(".user").text(userChoice).prepend(function() {
+				if (userChoice == "rock") {
+					$(this).prepend("<img src='./rps_images/rock.png' width='100px' height='100px'>");
+						decrement(); 
+					return false; 
+				} else if (userChoice == "paper") {
+					$(this).prepend("<img src='./rps_images/paper.png' width='100px' height='100px'>"); 
+						decrement(); 
+					return false;
+				} else if (userChoice == "scissors") {
+					$(this).prepend("<img src='./rps_images/scissors.png' width='100px' height='100px'>");
+						decrement(); 
+					return false;
+				} else {
+					return false; 
+				}
+			 
+				function decrement() {
+					var time = 5;
+					
+					var timer = setInterval(function () { 
+						
+						$(".vs p").text(time--);
+			
+						if( time == -1) {
+							$(".vs p").stop().text("VS");
+							clearInterval(timer);
+						} 
+					
+						compChoice = 0; 
+						
+						var x = Math.random(); 
+						if (x < .34) {
+							compChoice = "rock"; 				
+						} else if (x > .67) {
+							compChoice = "paper"
+						} else {
+							compChoice = "scissors"
+						}
+
+						$(".compmess").text(compChoice).prepend(function () {
+							if (compChoice == "rock") {
+								$(this).prepend("<img src='./rps_images/rock.png' width='100px' height='100px'>");
+								return false; 
+							} else if (compChoice == "paper") {
+								$(this).prepend("<img src='./rps_images/paper.png' width='100px' height='100px'>"); 
+								return false;
+							} else if (compChoice == "scissors") {
+								$(this).prepend("<img src='./rps_images/scissors.png' width='100px' height='100px'>");
+								return false;
+							} else {
+								return false; 
+							}
+						}); 
+
+						var y = compare(userChoice, compChoice)
+						$(".statusmess").text(y);
+
+					}, 300); 
+				} 			
+			});
+		});
+	});
+
+	function compare(choice1, choice2) {
+		console.log("this is choice1:", choice1);
+		console.log("this is choice2:", choice2)
+		if (choice1 == choice2) {
+			return "It's a tie";
+		} else if (choice1 == "rock") {
+			if (choice2 == "paper") {
+				return "paper wins!"; 				
+			} else {
+				return "rock win!";
+			}
+		} else if (choice1 == "paper") {
+			if (choice2 == "scissors") {
+				return "scissors wins!"; 
+			} else {
+				return "paper wins"; 
+			}
+		} else if (choice1 == "scissors") {
+			if (choice2 == "rock") {
+				return "rock wins!"
+			} else {
+				return "scissors wins!" 
+			}
+		}	
+
+	}
+
+</script>
+
+</body>
+
+</html>
+
+
+
